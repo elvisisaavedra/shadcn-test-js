@@ -2,27 +2,17 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheetv2'
+} from '@/components/ui/sheetv3'
 import { Button } from '@/components/ui/button'
 
-export default function SheetV2() {
+export default function SheetV3() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Open v2</Button>
+        <Button variant="outline">Open v3</Button>
       </SheetTrigger>
-      <SheetContent side={'bottom'}>
-        <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
-          <SheetDescription>
-            Make changes to your profile here. Click save when you are done.
-          </SheetDescription>
-        </SheetHeader>
+      <SheetContent side={'left'} title={<span>Título</span>}>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <label htmlFor="name" className="text-right">
@@ -37,11 +27,9 @@ export default function SheetV2() {
             <input id="username" className="col-span-3" />
           </div>
         </div>
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
-          </SheetClose>
-        </SheetFooter>
+        <SheetClose asChild>
+          <Button variant={'secondary'}>Close</Button>
+        </SheetClose>
       </SheetContent>
     </Sheet>
   )

@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/dialog'
 import SheetV1 from '@/components/shadcn/sheetV1'
 import SheetV2 from '@/components/shadcn/sheetV2'
+import SheetV3 from '@/components/shadcn/sheetV3'
 
 import { Button } from '@/components/ui/button'
 
@@ -74,6 +75,7 @@ function App() {
 
       <SheetV1 />
       <SheetV2 />
+      <SheetV3 />
     </>
   )
 }
